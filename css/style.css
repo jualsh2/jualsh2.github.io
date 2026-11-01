@@ -145,13 +145,13 @@ section.block { padding: clamp(48px, 7vw, 88px) 0; border-top: 1px solid var(--l
 @media (max-width: 640px) { .search { margin-left: 0; max-width: none; } }
 .project-list { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
 .project-row { border-bottom: 1px solid var(--line); }
-.project-row a { display: grid; grid-template-columns: 15rem minmax(0, 1fr) 15rem; gap: 8px 24px; align-items: baseline; padding: 20px 4px; text-decoration: none; color: var(--ink); }
+.project-row a { display: grid; grid-template-columns: 120px 14rem minmax(0, 1fr) 13rem; gap: 8px 24px; align-items: center; padding: 20px 4px; text-decoration: none; color: var(--ink); }
 .project-row a:hover { background: var(--surface); }
 .project-row h3 { font-size: var(--step-1); font-weight: 700; }
 .project-row .tagline { margin: 0; color: var(--ink-soft); font-size: 1rem; }
 .project-row .ctx { font-family: var(--ui); font-size: 0.8rem; color: var(--ink-soft); text-align: right; }
 .empty { padding: 24px 4px; color: var(--ink-soft); font-family: var(--ui); }
-@media (max-width: 900px) { .project-row a { grid-template-columns: 1fr; } .project-row .ctx { text-align: left; } }
+@media (max-width: 900px) { .project-row a { grid-template-columns: 96px 1fr; } .project-row .tagline, .project-row .ctx { grid-column: 1 / -1; } .project-row .row-thumb { grid-row: span 1; } .project-row .ctx { text-align: left; } }
 
 /* ---------- About / experience ---------- */
 .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(24px, 5vw, 64px); }
@@ -256,3 +256,7 @@ section.block { padding: clamp(48px, 7vw, 88px) 0; border-top: 1px solid var(--l
 .portrait .p-photo { border-radius: 14px; object-position: 50% 20%; box-shadow: 0 0 0 1px var(--line); }
 .cert-img { flex: none; width: 96px; height: 68px; object-fit: cover; object-position: top; border-radius: 6px; border: 1px solid var(--line); background: #fff; }
 @media (max-width: 480px) { .cert-img { width: 72px; height: 52px; } }
+.row-thumb { width: 120px; height: 84px; object-fit: cover; object-position: top; border-radius: 8px; border: 1px solid var(--line); background: var(--surface); }
+@media (max-width: 900px) { .row-thumb { width: 96px; height: 68px; } }
+.cert-img { width: 132px; height: 94px; object-fit: contain; background: #fff; padding: 2px; }
+@media (max-width: 480px) { .cert-img { width: 88px; height: 62px; } }

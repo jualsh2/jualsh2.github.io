@@ -94,6 +94,7 @@
     shown.forEach(function (p) {
       list.appendChild(el("li", { class: "project-row" }, [
         el("a", { href: projectUrl(p.slug) }, [
+          p.cover ? el("img", { class: "row-thumb", src: p.cover, alt: "", loading: "lazy", width: 120, height: 84 }) : null,
           el("h3", { text: p.title }),
           el("p", { class: "tagline", text: p.tagline + " " + p.tech.slice(0, 4).join(", ") + "." }),
           el("span", { class: "ctx", text: p.context })
@@ -156,8 +157,14 @@
   D.certificates.forEach(function (c) {
     var org = c.issuer.replace(/\s*\(Coursera\)/, "");
     var via = /Coursera/.test(c.issuer) ? "Coursera" : c.issuer;
+    var badge = function () { return el("span", { class: "cert-badge", "aria-hidden": "true", text: via === "Coursera" ? "C" : "D" }); };
+    var thumb = badge();
+    if (c.image) {
+      thumb = el("img", { class: "cert-img", src: c.image, alt: "Certificate: " + c.name, loading: "lazy", referrerpolicy: "no-referrer" });
+      thumb.addEventListener("error", function () { thumb.replaceWith(badge()); });
+    }
     var body = [
-      c.image ? el("img", { class: "cert-img", src: c.image, alt: "Certificate: " + c.name, loading: "lazy", width: 96, height: 68 }) : el("span", { class: "cert-badge", "aria-hidden": "true", text: via === "Coursera" ? "C" : "D" }),
+      thumb,
       el("span", { class: "cert-main" }, [
         el("span", { class: "cert-name", text: c.name }),
         el("span", { class: "cert-org", text: org }),

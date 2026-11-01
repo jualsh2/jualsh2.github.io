@@ -229,7 +229,8 @@ window.PORTFOLIO = {
       teamNote: "Team of three",
       role: "Tokenization, input parsing and invalid-token error handling.",
       tech: ["C++"],
-      cover: null,
+      cover: "assets/img/postfix-terminal.webp",
+      coverAlt: "Terminal output of the Postfix evaluator: two correct results and two error messages",
       problem:
         "Practise core data structures by implementing them by hand and putting them to work.",
       solution:
@@ -311,12 +312,12 @@ window.PORTFOLIO = {
 
   // Add a "verify" URL to any certificate to show a verification link.
   certificates: [
-    { name: "Introduction to Power BI", issuer: "DataCamp", date: "Jun 2026", verify: "https://www.datacamp.com/statement-of-accomplishment/course/921cc85c592fccd16b569b048d7b26c4927cf812" },
-    { name: "Introduction to Python", issuer: "DataCamp", date: "Jun 2026", verify: "https://www.datacamp.com/statement-of-accomplishment/course/d900fa261a8907b64a582e63dc9026b4cf7e312a" },
-    { name: "Successful Presentation", issuer: "University of Colorado Boulder (Coursera)", date: "Apr 2025", verify: "https://www.coursera.org/account/accomplishments/records/3SR7QDMBCBEX" },
-    { name: "Academic Information Seeking", issuer: "University of Copenhagen (Coursera)", date: "Nov 2024", verify: "https://www.coursera.org/account/accomplishments/records/HQI3UZONFIU0" },
-    { name: "Digital Safety and Security", issuer: "Arizona State University (Coursera)", date: "Nov 2024", verify: "https://www.coursera.org/account/accomplishments/records/JEUI8NQQMKR5" },
-    { name: "Programming for Everybody (Getting Started with Python)", issuer: "University of Michigan (Coursera)", date: "Apr 2024", verify: "https://www.coursera.org/account/accomplishments/records/56EN8PY2UU9M" },
-    { name: "Python Data Structures", issuer: "University of Michigan (Coursera)", date: "Apr 2024", verify: "https://www.coursera.org/account/accomplishments/records/PZDETXJTLMJV" }
+    { name: "Introduction to Power BI", issuer: "DataCamp", date: "Jun 2026", verify: "https://www.datacamp.com/statement-of-accomplishment/course/921cc85c592fccd16b569b048d7b26c4927cf812", image: "https://www.datacamp.com/statement-of-accomplishment/badge/course/921cc85c592fccd16b569b048d7b26c4927cf812.png" },
+    { name: "Introduction to Python", issuer: "DataCamp", date: "Jun 2026", verify: "https://www.datacamp.com/statement-of-accomplishment/course/d900fa261a8907b64a582e63dc9026b4cf7e312a", image: "https://www.datacamp.com/statement-of-accomplishment/badge/course/d900fa261a8907b64a582e63dc9026b4cf7e312a.png" },
+    { name: "Successful Presentation", issuer: "University of Colorado Boulder (Coursera)", date: "Apr 2025", verify: "https://www.coursera.org/account/accomplishments/records/3SR7QDMBCBEX", image: "https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~3SR7QDMBCBEX/CERTIFICATE_LANDING_PAGE~3SR7QDMBCBEX.jpeg" },
+    { name: "Academic Information Seeking", issuer: "University of Copenhagen (Coursera)", date: "Nov 2024", verify: "https://www.coursera.org/account/accomplishments/records/HQI3UZONFIU0", image: "https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~HQI3UZONFIU0/CERTIFICATE_LANDING_PAGE~HQI3UZONFIU0.jpeg" },
+    { name: "Digital Safety and Security", issuer: "Arizona State University (Coursera)", date: "Nov 2024", verify: "https://www.coursera.org/account/accomplishments/records/JEUI8NQQMKR5", image: "https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~JEUI8NQQMKR5/CERTIFICATE_LANDING_PAGE~JEUI8NQQMKR5.jpeg" },
+    { name: "Programming for Everybody (Getting Started with Python)", issuer: "University of Michigan (Coursera)", date: "Apr 2024", verify: "https://www.coursera.org/account/accomplishments/records/56EN8PY2UU9M", image: "https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~56EN8PY2UU9M/CERTIFICATE_LANDING_PAGE~56EN8PY2UU9M.jpeg" },
+    { name: "Python Data Structures", issuer: "University of Michigan (Coursera)", date: "Apr 2024", verify: "https://www.coursera.org/account/accomplishments/records/PZDETXJTLMJV", image: "https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~PZDETXJTLMJV/CERTIFICATE_LANDING_PAGE~PZDETXJTLMJV.jpeg" }
   ]
 };
