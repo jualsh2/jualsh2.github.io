@@ -141,6 +141,8 @@
     sk.appendChild(el("div", null, [el("h3", { text: g.group }), ul]));
   });
 
+  $('[data-field="avatar"]').src = "assets/img/bitmoji.webp";
+
   /* ---------- Education & certificates ---------- */
   var edu = $("[data-education]");
   D.education.forEach(function (e) {
@@ -155,7 +157,7 @@
     var org = c.issuer.replace(/\s*\(Coursera\)/, "");
     var via = /Coursera/.test(c.issuer) ? "Coursera" : c.issuer;
     var body = [
-      el("span", { class: "cert-badge", "aria-hidden": "true", text: via === "Coursera" ? "C" : "D" }),
+      c.image ? el("img", { class: "cert-img", src: c.image, alt: "Certificate: " + c.name, loading: "lazy", width: 96, height: 68 }) : el("span", { class: "cert-badge", "aria-hidden": "true", text: via === "Coursera" ? "C" : "D" }),
       el("span", { class: "cert-main" }, [
         el("span", { class: "cert-name", text: c.name }),
         el("span", { class: "cert-org", text: org }),
