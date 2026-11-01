@@ -44,7 +44,6 @@
   /* ---------- Hero ---------- */
   $('[data-field="role"]').textContent = P.role + " · " + P.location;
   $('[data-field="intro"]').textContent = P.intro;
-  $('[data-field="avatar"]').src = P.avatar;
   document.querySelectorAll('[data-link="github"]').forEach(function (a) { a.href = P.github; });
   document.querySelectorAll('[data-link="linkedin"]').forEach(function (a) { a.href = P.linkedin; });
 
@@ -153,9 +152,28 @@
   });
   var certs = $("[data-certificates]");
   D.certificates.forEach(function (c) {
-    var name = c.verify ? el("a", { href: c.verify, text: c.name, "aria-label": c.name + ", view credential" }) : document.createTextNode(c.name);
-    var left = el("span", null, [name, document.createTextNode(", " + c.issuer)]);
-    certs.appendChild(el("li", null, [left, el("span", { text: c.date })]));
+    var org = c.issuer.replace(/\s*\(Coursera\)/, "");
+    var via = /Coursera/.test(c.issuer) ? "Coursera" : c.issuer;
+    var body = [
+      el("span", { class: "cert-badge", "aria-hidden": "true", text: via === "Coursera" ? "C" : "D" }),
+      el("span", { class: "cert-main" }, [
+        el("span", { class: "cert-name", text: c.name }),
+        el("span", { class: "cert-org", text: org }),
+        el("span", { class: "cert-meta" }, [el("span", { text: c.date }), el("span", { class: "cert-via", text: "via " + via })])
+      ]),
+      el("span", { class: "cert-go", "aria-hidden": "true", text: "View" })
+    ];
+    var card = c.verify
+      ? el("a", { class: "cert", href: c.verify, target: "_blank", rel: "noopener", "aria-label": c.name + ", " + org + ", " + c.date + ". View credential" }, body)
+      : el("div", { class: "cert" }, body);
+    certs.appendChild(el("li", null, [card]));
+  });
+
+  /* ---------- Portrait toggle ---------- */
+  var pt = $("[data-portrait]");
+  if (pt) pt.addEventListener("click", function () {
+    var on = pt.getAttribute("aria-pressed") !== "true";
+    pt.setAttribute("aria-pressed", String(on));
   });
 
   /* ---------- Contact ---------- */
