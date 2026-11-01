@@ -92,12 +92,15 @@
     });
     list.innerHTML = "";
     shown.forEach(function (p) {
-      list.appendChild(el("li", { class: "project-row" }, [
-        el("a", { href: projectUrl(p.slug) }, [
-          p.cover ? el("img", { class: "row-thumb", src: p.cover, alt: "", loading: "lazy", width: 120, height: 84 }) : null,
-          el("h3", { text: p.title }),
-          el("p", { class: "tagline", text: p.tagline + " " + p.tech.slice(0, 4).join(", ") + "." }),
-          el("span", { class: "ctx", text: p.context })
+      list.appendChild(el("li", { class: "pcard-wrap" }, [
+        el("a", { class: "pcard", href: projectUrl(p.slug) }, [
+          p.cover ? el("img", { src: p.cover, alt: "", loading: "lazy", width: 800, height: 500 }) : null,
+          el("div", { class: "pcard-body" }, [
+            el("p", { class: "pcard-meta", text: p.context }),
+            el("h3", { text: p.title }),
+            el("p", { class: "pcard-tag", text: p.tagline }),
+            el("ul", { class: "tags", "aria-label": "Technologies" }, p.tech.slice(0, 4).map(function (t) { return el("li", { text: t }); }))
+          ])
         ])
       ]));
     });
@@ -157,25 +160,25 @@
   D.certificates.forEach(function (c) {
     var org = c.issuer.replace(/\s*\(Coursera\)/, "");
     var via = /Coursera/.test(c.issuer) ? "Coursera" : c.issuer;
-    var badge = function () { return el("span", { class: "cert-badge", "aria-hidden": "true", text: via === "Coursera" ? "C" : "D" }); };
-    var thumb = badge();
+    var media = el("div", { class: "cert-media" });
+    var fallback = function () { media.textContent = ""; media.appendChild(el("span", { class: "cert-fallback", text: org })); };
     if (c.image) {
-      thumb = el("img", { class: "cert-img", src: c.image, alt: "Certificate: " + c.name, loading: "lazy", referrerpolicy: "no-referrer" });
-      thumb.addEventListener("error", function () { thumb.replaceWith(badge()); });
-    }
+      var im = el("img", { src: c.image, alt: "Certificate: " + c.name + ", " + org, loading: "lazy", referrerpolicy: "no-referrer" });
+      im.addEventListener("error", fallback);
+      media.appendChild(im);
+    } else fallback();
     var body = [
-      thumb,
-      el("span", { class: "cert-main" }, [
-        el("span", { class: "cert-name", text: c.name }),
-        el("span", { class: "cert-org", text: org }),
-        el("span", { class: "cert-meta" }, [el("span", { text: c.date }), el("span", { class: "cert-via", text: "via " + via })])
-      ]),
-      el("span", { class: "cert-go", "aria-hidden": "true", text: "View" })
+      media,
+      el("div", { class: "cert-body" }, [
+        el("p", { class: "cert-meta" }, [el("span", { text: "Course via " + via }), el("span", { text: c.date })]),
+        el("h4", { class: "cert-name", text: c.name }),
+        el("p", { class: "cert-org", text: org }),
+        c.verify ? el("span", { class: "cert-verify", text: "Verify credential \u2197" }) : null
+      ])
     ];
-    var card = c.verify
-      ? el("a", { class: "cert", href: c.verify, target: "_blank", rel: "noopener", "aria-label": c.name + ", " + org + ", " + c.date + ". View credential" }, body)
-      : el("div", { class: "cert" }, body);
-    certs.appendChild(el("li", null, [card]));
+    certs.appendChild(el("li", null, [c.verify
+      ? el("a", { class: "cert", href: c.verify, target: "_blank", rel: "noopener", "aria-label": c.name + ", " + org + ", " + c.date + ". Verify credential, opens in a new tab" }, body)
+      : el("div", { class: "cert" }, body)]));
   });
 
   /* ---------- Portrait toggle ---------- */
