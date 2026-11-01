@@ -1,13 +1,13 @@
 /* ---------- Tokens ---------- */
 :root {
-  --ground: #f3f6f5;
+  --ground: #f2f6fc;
   --surface: #ffffff;
-  --ink: #10292e;
-  --ink-soft: #3f5a5e;
-  --line: #d5e0de;
-  --accent: #0a6b70;
+  --ink: #0f2447;
+  --ink-soft: #44587a;
+  --line: #d3deef;
+  --accent: #1a56c4;
   --accent-ink: #ffffff;
-  --accent-soft: #dcefee;
+  --accent-soft: #dde9fb;
   --sand: #efe7d8;
   --focus: #c25a00;
 
@@ -29,27 +29,27 @@
 }
 
 :root[data-theme="dark"] {
-  --ground: #0c1b1e;
-  --surface: #122a2e;
-  --ink: #e4efed;
-  --ink-soft: #a8bfbc;
-  --line: #24464a;
-  --accent: #63c7c2;
-  --accent-ink: #062022;
-  --accent-soft: #173c3f;
+  --ground: #0a1630;
+  --surface: #101f40;
+  --ink: #e6eefc;
+  --ink-soft: #a9bbdb;
+  --line: #243a66;
+  --accent: #7fb0ff;
+  --accent-ink: #06142e;
+  --accent-soft: #16294f;
   --sand: #2a2a22;
   --focus: #ffb36b;
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --ground: #0c1b1e;
-    --surface: #122a2e;
-    --ink: #e4efed;
-    --ink-soft: #a8bfbc;
-    --line: #24464a;
-    --accent: #63c7c2;
-    --accent-ink: #062022;
-    --accent-soft: #173c3f;
+    --ground: #0a1630;
+    --surface: #101f40;
+    --ink: #e6eefc;
+    --ink-soft: #a9bbdb;
+    --line: #243a66;
+    --accent: #7fb0ff;
+    --accent-ink: #06142e;
+    --accent-soft: #16294f;
     --sand: #2a2a22;
     --focus: #ffb36b;
   }

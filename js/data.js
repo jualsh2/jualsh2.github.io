@@ -306,8 +306,7 @@ window.PORTFOLIO = {
 
   education: [
     { degree: "B.Sc. in Computer Science", org: "Effat University, Jeddah", date: "Expected February 2028",
-      note: "Coursework includes Artificial Intelligence, Data Structures, Databases and Cybersecurity." },
-    { degree: "English Language Program", org: "Effat University, Jeddah", date: "2023" }
+      note: "Coursework includes Artificial Intelligence, Data Structures, Databases and Cybersecurity." }
   ],
 
   // Add a "verify" URL to any certificate to show a verification link.
