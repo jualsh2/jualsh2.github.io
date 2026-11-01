@@ -1,341 +1,147 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Joman Ali Alsharbini | Portfolio</title>
-    <meta
-        name="description"
-        content="Interactive portfolio of Joman Ali Alsharbini, a computer science junior focused on software engineering, AI, and human-centered systems."
-    >
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=DM+Sans:wght@400;500;700&display=swap"
-        rel="stylesheet"
-    >
-    <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-    >
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Joman Alsharbini · Computer Science Portfolio</title>
+  <meta name="description" content="Projects by Joman Alsharbini, Computer Science student at Effat University: Hajj crowd simulation, dementia-risk screening at the IBM Z Datathon, ML pipelines and web apps.">
+  <link rel="canonical" href="https://jualsh2.github.io/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Joman Alsharbini · Computer Science Portfolio">
+  <meta property="og:description" content="AI, data and web projects by a Computer Science student at Effat University, Jeddah.">
+  <meta property="og:url" content="https://jualsh2.github.io/">
+  <meta property="og:image" content="https://jualsh2.github.io/assets/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#0a6b70">
+  <link rel="icon" href="assets/img/avatar.webp" type="image/webp">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script>
+    try { var t = localStorage.getItem("theme"); if (t) document.documentElement.setAttribute("data-theme", t); } catch (e) {}
+  </script>
 </head>
 <body>
-    <div class="page-shell">
-        <div class="aurora aurora-one"></div>
-        <div class="aurora aurora-two"></div>
+  <a class="skip" href="#main">Skip to content</a>
 
-        <nav class="site-nav">
-            <a class="brand" href="#top">JA</a>
-            <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Toggle navigation">
-                <span></span>
-                <span></span>
-            </button>
-            <div class="nav-links">
-                <a href="#about">About</a>
-                <a href="#projects">Projects</a>
-                <a href="#skills">Skills</a>
-                <a href="#courses">Courses</a>
-                <a href="#timeline">Journey</a>
-                <a href="#contact">Contact</a>
-            </div>
-        </nav>
-
-        <main id="top">
-            <section class="hero section">
-                <div class="hero-copy reveal">
-                    <p class="eyebrow">Computer Science Junior</p>
-                    <h1>Building colorful digital experiences with logic, curiosity, and human-centered AI.</h1>
-                    <p class="hero-text">
-                        I am Joman Ali Alsharbini, a student at <strong>Effat University</strong> exploring
-                        software engineering, data-driven systems, and thoughtful product design.
-                    </p>
-                    <div class="hero-actions">
-                        <a class="button button-primary" href="#projects">View Projects</a>
-                        <a class="button button-secondary" href="#contact">Let&apos;s Connect</a>
-                    </div>
-                    <div class="social-links">
-                        <a href="#" aria-label="GitHub profile"><i class="fa-brands fa-github"></i></a>
-                        <a href="#" aria-label="LinkedIn profile"><i class="fa-brands fa-linkedin-in"></i></a>
-                        <a href="mailto:hello@example.com" aria-label="Send email"><i class="fa-regular fa-envelope"></i></a>
-                    </div>
-                </div>
-
-                <div class="hero-card reveal">
-                    <div class="profile-showcase glass-card">
-                        <div class="profile-ring">
-                            <img class="profile-image" src="1.png" alt="Portrait of Joman Ali Alsharbini">
-                        </div>
-                        <div class="profile-badge">
-                            <span class="status-dot"></span>
-                            CS student crafting modern digital experiences
-                        </div>
-                    </div>
-                    <div class="spotlight-card">
-                        <p class="mini-label">Current Focus</p>
-                        <h2>Creating systems that feel intelligent and useful.</h2>
-                        <ul class="focus-list">
-                            <li>AI-assisted software ideas</li>
-                            <li>Frontend interfaces with strong UX</li>
-                            <li>Solid software engineering foundations</li>
-                        </ul>
-                    </div>
-                    <div class="metric-grid">
-                        <article class="metric-card">
-                            <span class="metric-number" data-count="6">0</span>
-                            <span class="metric-label">Projects Built</span>
-                        </article>
-                        <article class="metric-card">
-                            <span class="metric-number" data-count="10">0</span>
-                            <span class="metric-label">Core Skills</span>
-                        </article>
-                        <article class="metric-card">
-                            <span class="metric-number" data-count="12">0</span>
-                            <span class="metric-label">Courses Completed</span>
-                        </article>
-                    </div>
-                </div>
-            </section>
-
-            <section id="about" class="section reveal">
-                <div class="section-heading">
-                    <p class="eyebrow">About Me</p>
-                    <h2>A curious builder with a growing toolkit.</h2>
-                </div>
-                <div class="about-grid">
-                    <article class="glass-card about-panel">
-                        <p>
-                            I enjoy turning ideas into clean, usable experiences. My interests sit at the
-                            intersection of problem-solving, creative design, and emerging AI systems.
-                        </p>
-                        <p>
-                            Whether I am exploring algorithms, building interfaces, or structuring project
-                            workflows, I care about making technology clear, helpful, and engaging.
-                        </p>
-                    </article>
-                    <article class="glass-card about-panel">
-                        <h3>What I bring</h3>
-                        <div class="pill-row">
-                            <span class="pill">Analytical Thinking</span>
-                            <span class="pill">Team Collaboration</span>
-                            <span class="pill">Fast Learner</span>
-                            <span class="pill">Creative Problem Solving</span>
-                            <span class="pill">User-Focused Design</span>
-                            <span class="pill">Structured Development</span>
-                        </div>
-                    </article>
-                </div>
-            </section>
-
-            <section id="projects" class="section reveal">
-                <div class="section-heading">
-                    <p class="eyebrow">Projects</p>
-                    <h2>Selected work and concept builds.</h2>
-                </div>
-                <div class="project-filters" aria-label="Project filters">
-                    <button class="filter-chip active" data-filter="all" type="button">All</button>
-                    <button class="filter-chip" data-filter="ai" type="button">AI</button>
-                    <button class="filter-chip" data-filter="web" type="button">Web</button>
-                    <button class="filter-chip" data-filter="data" type="button">Data</button>
-                </div>
-                <div class="project-grid">
-                    <article class="glass-card project-card" data-category="ai">
-                        <div class="card-accent accent-sun"></div>
-                        <p class="project-type">AI Project</p>
-                        <h3>Study Assistant Chatbot</h3>
-                        <p>
-                            A conversational helper designed to organize course materials, answer common
-                            questions, and support student revision.
-                        </p>
-                        <div class="tag-row">
-                            <span>Python</span>
-                            <span>NLP</span>
-                            <span>Prompt Design</span>
-                        </div>
-                    </article>
-                    <article class="glass-card project-card" data-category="web">
-                        <div class="card-accent accent-sky"></div>
-                        <p class="project-type">Web Experience</p>
-                        <h3>Interactive Campus Portal</h3>
-                        <p>
-                            A concept portal for students to browse announcements, course updates, and club
-                            events in one polished dashboard.
-                        </p>
-                        <div class="tag-row">
-                            <span>HTML</span>
-                            <span>CSS</span>
-                            <span>JavaScript</span>
-                        </div>
-                    </article>
-                    <article class="glass-card project-card" data-category="data">
-                        <div class="card-accent accent-mint"></div>
-                        <p class="project-type">Data Project</p>
-                        <h3>Performance Insights Dashboard</h3>
-                        <p>
-                            A dashboard prototype that visualizes academic trends and highlights useful
-                            patterns for planning and improvement.
-                        </p>
-                        <div class="tag-row">
-                            <span>Data Analysis</span>
-                            <span>Visualization</span>
-                            <span>Research</span>
-                        </div>
-                    </article>
-                    <article class="glass-card project-card" data-category="web">
-                        <div class="card-accent accent-peach"></div>
-                        <p class="project-type">Frontend Build</p>
-                        <h3>Creative Portfolio Prototype</h3>
-                        <p>
-                            A vibrant personal brand concept focused on motion, storytelling, and memorable
-                            interaction patterns.
-                        </p>
-                        <div class="tag-row">
-                            <span>UI Design</span>
-                            <span>Responsive Layout</span>
-                            <span>Animation</span>
-                        </div>
-                    </article>
-                </div>
-            </section>
-
-            <section id="skills" class="section reveal">
-                <div class="section-heading">
-                    <p class="eyebrow">Skills</p>
-                    <h2>Core strengths across code, design, and teamwork.</h2>
-                </div>
-                <div class="skills-layout">
-                    <article class="glass-card skill-block">
-                        <h3>Programming</h3>
-                        <div class="progress-list">
-                            <div class="progress-item">
-                                <div class="progress-title">
-                                    <span>Python</span>
-                                    <span>85%</span>
-                                </div>
-                                <div class="progress-bar"><span style="width: 85%"></span></div>
-                            </div>
-                            <div class="progress-item">
-                                <div class="progress-title">
-                                    <span>JavaScript</span>
-                                    <span>78%</span>
-                                </div>
-                                <div class="progress-bar"><span style="width: 78%"></span></div>
-                            </div>
-                            <div class="progress-item">
-                                <div class="progress-title">
-                                    <span>Java</span>
-                                    <span>72%</span>
-                                </div>
-                                <div class="progress-bar"><span style="width: 72%"></span></div>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="glass-card skill-block">
-                        <h3>Technical Areas</h3>
-                        <div class="pill-row">
-                            <span class="pill">Algorithms</span>
-                            <span class="pill">OOP</span>
-                            <span class="pill">Data Structures</span>
-                            <span class="pill">Web Development</span>
-                            <span class="pill">Software Engineering</span>
-                            <span class="pill">UI/UX Thinking</span>
-                            <span class="pill">AI Fundamentals</span>
-                            <span class="pill">Databases</span>
-                        </div>
-                    </article>
-                    <article class="glass-card skill-block">
-                        <h3>Collaboration Skills</h3>
-                        <div class="pill-row">
-                            <span class="pill">Communication</span>
-                            <span class="pill">Presentation</span>
-                            <span class="pill">Documentation</span>
-                            <span class="pill">Team Projects</span>
-                            <span class="pill">Critical Thinking</span>
-                            <span class="pill">Adaptability</span>
-                        </div>
-                    </article>
-                </div>
-            </section>
-
-            <section id="courses" class="section reveal">
-                <div class="section-heading">
-                    <p class="eyebrow">Courses</p>
-                    <h2>Academic learning that supports my portfolio.</h2>
-                </div>
-                <div class="course-grid">
-                    <article class="glass-card course-card">
-                        <span class="course-code">CS</span>
-                        <h3>Data Structures and Algorithms</h3>
-                        <p>Problem-solving patterns, runtime analysis, and efficient design strategies.</p>
-                    </article>
-                    <article class="glass-card course-card">
-                        <span class="course-code">SE</span>
-                        <h3>Software Engineering</h3>
-                        <p>Project planning, documentation, collaboration, testing, and maintainable systems.</p>
-                    </article>
-                    <article class="glass-card course-card">
-                        <span class="course-code">DB</span>
-                        <h3>Database Systems</h3>
-                        <p>Schema design, SQL thinking, data organization, and system reliability basics.</p>
-                    </article>
-                    <article class="glass-card course-card">
-                        <span class="course-code">AI</span>
-                        <h3>Introduction to Artificial Intelligence</h3>
-                        <p>Core concepts in intelligent systems, reasoning, and practical AI applications.</p>
-                    </article>
-                    <article class="glass-card course-card">
-                        <span class="course-code">WD</span>
-                        <h3>Web Development</h3>
-                        <p>Responsive interfaces, front-end structure, styling systems, and interaction design.</p>
-                    </article>
-                    <article class="glass-card course-card">
-                        <span class="course-code">UX</span>
-                        <h3>Human Computer Interaction</h3>
-                        <p>Designing products that are intuitive, accessible, and centered on user needs.</p>
-                    </article>
-                </div>
-            </section>
-
-            <section id="timeline" class="section reveal">
-                <div class="section-heading">
-                    <p class="eyebrow">Journey</p>
-                    <h2>How my learning path is taking shape.</h2>
-                </div>
-                <div class="timeline">
-                    <article class="timeline-item glass-card">
-                        <span class="timeline-year">2024</span>
-                        <h3>Strengthened programming foundations</h3>
-                        <p>Built confidence in structured problem solving, object-oriented programming, and teamwork.</p>
-                    </article>
-                    <article class="timeline-item glass-card">
-                        <span class="timeline-year">2025</span>
-                        <h3>Explored software and interface design</h3>
-                        <p>Started combining technical work with more polished user experiences and project thinking.</p>
-                    </article>
-                    <article class="timeline-item glass-card">
-                        <span class="timeline-year">2026</span>
-                        <h3>Expanding into AI and portfolio projects</h3>
-                        <p>Focusing on practical builds that connect creativity, engineering, and emerging AI tools.</p>
-                    </article>
-                </div>
-            </section>
-
-            <section id="contact" class="section reveal">
-                <div class="contact-banner glass-card">
-                    <div>
-                        <p class="eyebrow">Contact</p>
-                        <h2>Interested in collaborating or learning together?</h2>
-                        <p>
-                            I am always open to student collaborations, creative projects, and opportunities
-                            to keep building my experience.
-                        </p>
-                    </div>
-                    <a class="button button-primary" href="mailto:hello@example.com">Send a Message</a>
-                </div>
-            </section>
-        </main>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="#top">Joman Alsharbini</a>
+      <nav class="nav" aria-label="Sections">
+        <a href="#work">Work</a>
+        <a href="#projects">All projects</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch colour theme">
+        <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"></circle><path d="M12 3a9 9 0 0 0 0 18z" fill="currentColor"></path></svg>
+        <span data-theme-label>Theme</span>
+      </button>
     </div>
+  </header>
 
-    <script src="script.js"></script>
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="wrap hero-grid">
+        <div>
+          <h1><span>Joman</span><span>Alsharbini</span></h1>
+          <p class="role" data-field="role"></p>
+          <p class="intro" data-field="intro"></p>
+          <div class="contact-row">
+            <a class="btn primary" href="#work">See my work</a>
+            <a class="btn" data-link="github" href="#">GitHub</a>
+            <a class="btn" data-link="linkedin" href="#">LinkedIn</a>
+          </div>
+        </div>
+        <div class="hero-avatar"><img data-field="avatar" alt="Illustrated avatar of Joman" width="220" height="220"></div>
+      </div>
+    </section>
+
+    <section class="block" id="work" aria-labelledby="work-h">
+      <div class="wrap">
+        <div class="block-head">
+          <h2 id="work-h">Featured work</h2>
+          <p>Three projects I'm proudest of, with my part in each</p>
+        </div>
+        <div class="featured" data-featured></div>
+      </div>
+    </section>
+
+    <section class="block" id="projects" aria-labelledby="projects-h">
+      <div class="wrap">
+        <div class="block-head">
+          <h2 id="projects-h">All projects</h2>
+        </div>
+        <div class="controls">
+          <div class="filters" role="group" aria-label="Filter by area" data-filters></div>
+          <div class="search">
+            <label class="visually-hidden" for="q">Search projects</label>
+            <input id="q" type="search" placeholder="Search by name or technology" autocomplete="off" data-search>
+          </div>
+        </div>
+        <ul class="project-list" data-project-list></ul>
+        <p class="visually-hidden" aria-live="polite" data-count></p>
+      </div>
+    </section>
+
+    <section class="block" id="about" aria-labelledby="about-h">
+      <div class="wrap two-col">
+        <div class="prose">
+          <h2 id="about-h" class="sub-h" style="font-size: var(--step-3); margin-bottom: 20px">About me</h2>
+          <div data-about></div>
+        </div>
+        <div>
+          <h3 class="sub-h">Experience</h3>
+          <ol class="timeline" data-experience></ol>
+          <h3 class="sub-h" style="margin-top: 36px">Leadership &amp; activities</h3>
+          <ul class="simple-list" data-leadership></ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="block" id="skills" aria-labelledby="skills-h">
+      <div class="wrap">
+        <div class="block-head">
+          <h2 id="skills-h">Skills</h2>
+          <p>Each skill links to the projects where I used it</p>
+        </div>
+        <div class="skill-groups" data-skills></div>
+      </div>
+    </section>
+
+    <section class="block" id="education" aria-labelledby="edu-h">
+      <div class="wrap two-col">
+        <div>
+          <h2 id="edu-h" class="sub-h" style="font-size: var(--step-3); margin-bottom: 20px">Education</h2>
+          <ol class="timeline" data-education></ol>
+        </div>
+        <div>
+          <h3 class="sub-h">Courses &amp; certificates</h3>
+          <p class="meta" style="margin:-8px 0 12px">Each name opens the official credential.</p>
+          <ul class="simple-list" data-certificates></ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="block" id="contact" aria-labelledby="contact-h">
+      <div class="wrap">
+        <div class="contact">
+          <h2 id="contact-h">Let's talk</h2>
+          <p>I'm looking for co-op training and internship opportunities in AI, data and software. The quickest way to reach me is by email.</p>
+          <div class="contact-row" data-contact></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">Built by Joman Alsharbini. Content kept in <code>js/data.js</code>.</div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
