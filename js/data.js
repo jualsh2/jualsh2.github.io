@@ -311,6 +311,8 @@ window.PORTFOLIO = {
 
   // Add a "verify" URL to any certificate to show a verification link.
   certificates: [
+    { name: "IEEE Student Membership", issuer: "IEEE", kind: "Membership", date: "Through Dec 2027", image: "assets/img/ieee-membership.webp" },
+    { name: "IEEE Computer Society Student Membership", issuer: "IEEE Computer Society", kind: "Membership", date: "2027", image: "assets/img/ieee-computer-society.webp" },
     { name: "Introduction to Power BI", issuer: "DataCamp", date: "Jun 2026", verify: "https://www.datacamp.com/statement-of-accomplishment/course/921cc85c592fccd16b569b048d7b26c4927cf812", image: "https://www.datacamp.com/statement-of-accomplishment/badge/course/921cc85c592fccd16b569b048d7b26c4927cf812.png" },
     { name: "Introduction to Python", issuer: "DataCamp", date: "Jun 2026", verify: "https://www.datacamp.com/statement-of-accomplishment/course/d900fa261a8907b64a582e63dc9026b4cf7e312a", image: "https://www.datacamp.com/statement-of-accomplishment/badge/course/d900fa261a8907b64a582e63dc9026b4cf7e312a.png" },
     { name: "Successful Presentation", issuer: "University of Colorado Boulder (Coursera)", date: "Apr 2025", verify: "https://www.coursera.org/account/accomplishments/records/3SR7QDMBCBEX", image: "https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~3SR7QDMBCBEX/CERTIFICATE_LANDING_PAGE~3SR7QDMBCBEX.jpeg" },

@@ -160,6 +160,7 @@
   D.certificates.forEach(function (c) {
     var org = c.issuer.replace(/\s*\(Coursera\)/, "");
     var via = /Coursera/.test(c.issuer) ? "Coursera" : c.issuer;
+    var kind = c.kind || "Course";
     var media = el("div", { class: "cert-media" });
     var fallback = function () { media.textContent = ""; media.appendChild(el("span", { class: "cert-fallback", text: org })); };
     if (c.image) {
@@ -170,7 +171,7 @@
     var body = [
       media,
       el("div", { class: "cert-body" }, [
-        el("p", { class: "cert-meta" }, [el("span", { text: "Course via " + via }), el("span", { text: c.date })]),
+        el("p", { class: "cert-meta" }, [el("span", { text: kind === "Membership" ? "Membership" : "Course via " + via }), el("span", { text: c.date })]),
         el("h4", { class: "cert-name", text: c.name }),
         el("p", { class: "cert-org", text: org }),
         c.verify ? el("span", { class: "cert-verify", text: "Verify credential \u2197" }) : null
