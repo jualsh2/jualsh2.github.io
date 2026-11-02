@@ -78,7 +78,7 @@ window.PORTFOLIO = {
       context: "IBM Z Datathon 2026 · October 2026",
       team: ["Tala", "Hanan", "Amal Shuailah", "Joman Alsharbini", "Leen", "Reem"],
       teamNote: "Team of six, three phases: data (Tala, Hanan), model (Amal, Joman), app (Leen, Reem)",
-      role: "Phase 2, with Amal: model selection, tuning, final evaluation and explainability.",
+      role: "Co-led and built phase 2 with Amal: model selection, tuning, final evaluation and explainability.",
       tech: ["Python", "scikit-learn", "XGBoost", "Jupyter", "IBM LinuxONE"],
       cover: "assets/img/neorora-roc_top3.webp",
       coverAlt: "Cross-validated ROC curves for SVM, Logistic Regression and Naive Bayes",
