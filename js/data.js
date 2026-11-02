@@ -156,7 +156,7 @@ window.PORTFOLIO = {
       context: "CS2111 Web Development · Fall 2025",
       team: ["Osama Abutaha", "Joman Alsharbini", "Ahmad Baabod"],
       teamNote: "Team of three",
-      role: "Team member in a team of three students.",
+      role: "Proposed the idea and worked on every part of the site, with a team of three.",
       tech: ["PHP", "MySQL", "JavaScript", "HTML/CSS", "XAMPP"],
       cover: "assets/img/jh-landmarks-top.webp",
       coverAlt: "Jeddah Horizons landmarks page with a grid of landmark cards",
